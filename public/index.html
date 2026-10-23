@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scientific Calculator</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">PRECISION TOOLS</p>
+        <h1>Calculator<span class="accent">.</span></h1>
+      </div>
+      <button id="soundToggle" class="small-btn">🔊 Sound ON</button>
+    </header>
+
+    <div class="layout">
+      <section class="calculator">
+        <div class="display">
+          <div class="display-top">
+            <span id="angleMode">DEG</span>
+            <span id="status">Ready</span>
+          </div>
+          <div id="expression" class="expression"></div>
+          <div id="result" class="result">0</div>
+        </div>
+
+        <div class="mode-row">
+          <button data-action="angle">DEG / RAD</button>
+          <button data-action="clear">AC</button>
+          <button data-action="delete">DEL</button>
+          <button data-value="(">(</button>
+          <button data-value=")">)</button>
+        </div>
+
+        <div class="keypad">
+          <button class="scientific" data-value="sin(">sin</button>
+          <button class="scientific" data-value="cos(">cos</button>
+          <button class="scientific" data-value="tan(">tan</button>
+          <button class="scientific" data-value="log(">log</button>
+          <button class="scientific" data-value="ln(">ln</button>
+
+          <button class="scientific" data-value="sqrt(">√</button>
+          <button class="scientific" data-value="^2">x²</button>
+          <button class="scientific" data-value="^">xʸ</button>
+          <button class="scientific" data-value="!">x!</button>
+          <button class="scientific" data-value="pi">π</button>
+
+          <button data-value="7">7</button>
+          <button data-value="8">8</button>
+          <button data-value="9">9</button>
+          <button class="operator" data-value="/">÷</button>
+          <button class="operator" data-value="%">%</button>
+
+          <button data-value="4">4</button>
+          <button data-value="5">5</button>
+          <button data-value="6">6</button>
+          <button class="operator" data-value="*">×</button>
+          <button class="operator" data-value="-">−</button>
+
+          <button data-value="1">1</button>
+          <button data-value="2">2</button>
+          <button data-value="3">3</button>
+          <button class="operator" data-value="+">+</button>
+          <button class="operator" data-value="e">e</button>
+
+          <button data-value="0">0</button>
+          <button data-value="00">00</button>
+          <button data-value=".">.</button>
+          <button data-value="Ans">Ans</button>
+          <button class="equals" data-action="calculate">=</button>
+        </div>
+      </section>
+
+      <aside class="history">
+        <div class="history-heading">
+          <div>
+            <p class="eyebrow">YOUR ACTIVITY</p>
+            <h2>History</h2>
+          </div>
+          <button id="clearHistory" class="small-btn">Clear</button>
+        </div>
+        <p class="history-note">Your calculations and timestamps</p>
+        <div id="historyList" class="history-list">
+          <p class="empty">Loading history...</p>
+        </div>
+      </aside>
+    </div>
+
+    <footer>Scientific Calculator · Calculations saved to your database</footer>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/14.0.1/math.min.js"></script>
+  <script src="/js/calculator.js"></script>
+</body>
+</html>
